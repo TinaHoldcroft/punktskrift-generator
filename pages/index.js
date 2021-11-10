@@ -33,11 +33,30 @@ export default function Home() {
             'x' : '&#10285;',
             'y' : '&#10301;',
             'z' : '&#10293;',
-            'æ': '&#10268;',
-            'ø': '&#10282;',
-            'å' : '',
+            'æ' : '&#10268;',
+            'ø' : '&#10282;',
+            //'å' : '',
             ' ': '&emsp;',
-            '!' : '&emsp;'
+            //'!' : '',
+            //'.' : '',
+            //',' : '',
+            //'?' : '',
+            //':' : '',
+            //';' : '',
+            //'-' : '',
+            //'#' : '',
+            //''' : '',
+            //'&' : '',
+            //'0' : '',
+            //'1' : '',
+            //'2' : '',
+            //'3' : '',
+            //'4' : '',
+            //'5' : '',
+            //'6' : '',
+            //'7' : '',
+            //'8' : '',
+            //'9' : '',
         }
 
         textInput.onkeyup = function() {
@@ -63,7 +82,7 @@ export default function Home() {
             <div className="braille-generator-container">
                 <form className="braille-generator">
                     <label htmlFor="textInput">Punktskrift Generator</label>
-                    <input type="text" id="textInput" placeholder="skriv her..." />
+                    <input autoComplete="off" type="text" id="textInput" placeholder="skriv her..." />
                     <div id="output"></div>
                     <div>
                         <button>Kopier <i className="fas fa-copy"></i></button>
