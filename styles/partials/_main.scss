@@ -17,7 +17,7 @@
 .braille-generator {
     @include flex(column nowrap,flex-start, stretch, auto, flex-start, 2vmax);
     margin: 3vmax;
-    height: 80vh;
+    height: 100%;
     box-shadow: 4.0px 8.0px 8.0px hsl(0deg 0% 0% / 0.38);
     label {
         text-transform: uppercase;
@@ -25,14 +25,37 @@
         width: 100%;
         background-color: $yellow;
         text-align: center;
-        line-height: 3em;
-        font-size: 2em;
+        padding: 1em 0.75em;
+        margin: 0 0 1vmax 0;
+        font-size: clamp(1.5em, 4vw, 2.5rem);
         letter-spacing: 0.05em;
     }
     input {
         height: 2.5rem;
+        padding: 0 6px;
     }
     input, textarea, div {
         margin: 0 3vmax;
+        &:focus {
+            border: solid 2px $yellow;
+            outline: none;
+        }
+    }
+    textarea {
+        min-height: 6vmax;    
+    }
+    .btn-group {
+        @include flex(row nowrap,flex-start, stretch, auto, flex-start, 1vmin);
+        margin: 0 3vmax 4vmax 3vmax;
+        button {
+            width: 100%;
+            border: none;
+            background-color: $yellow;
+            border: solid 2px $yellow;
+            padding: 0.8em 0;
+            &:focus, &:hover {
+                background-color: lighten($yellow, 30%);
+            }
+        }
     }
 }

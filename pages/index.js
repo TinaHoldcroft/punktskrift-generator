@@ -4,7 +4,7 @@ import Head from 'next/head';
 export default function Home() {
 
     global.onload = function() {
-        var textInput = document.getElementById('textInput');
+        var txtInput = document.getElementById('txtInput');
     
         var alphabet = {
             'a' : '&#10241;',
@@ -35,18 +35,20 @@ export default function Home() {
             'z' : '&#10293;',
             'æ' : '&#10268;',
             'ø' : '&#10282;',
-            //'å' : '',
+            'å' : '&#10273;',
+
             ' ': '&emsp;',
-            //'!' : '',
-            //'.' : '',
-            //',' : '',
-            //'?' : '',
-            //':' : '',
-            //';' : '',
-            //'-' : '',
-            //'#' : '',
-            //''' : '',
-            //'&' : '',
+            '.' : '&#10244;',
+            ',' : '&#10242;',
+            '!' : '&#10262;',
+            '?' : '&#10274;',
+            ':' : '&#10258;',
+            ';' : '&#10246;',
+            '-' : '&#10276;',
+            '#' : '&#10300;',
+            "'" : '&#10256;',
+            '&' : '&#10284;',
+
             //'0' : '',
             //'1' : '',
             //'2' : '',
@@ -59,14 +61,14 @@ export default function Home() {
             //'9' : '',
         }
 
-        textInput.onkeyup = function() {
-            output.innerHTML = "";
-            var data = textInput.value.toLowerCase();
+        txtInput.onkeyup = function() {
+            txtOutput.innerHTML = "";
+            var data = txtInput.value.toLowerCase();
             for (var i = 0; i < data.length; i++) {
                 var letter = data.charAt(i);
                 if(letter.match()) {
                     var symbol = alphabet[letter];
-                    output.innerHTML += symbol;
+                    txtOutput.innerHTML += symbol;
                 }
             }
         }
@@ -76,15 +78,15 @@ export default function Home() {
     return (
         <>
             <Head>
-                <title>Punktskrift Generator</title>
+                <title>⠝⠃⠋ | Punktskrift Generator</title>
             </Head>
 
             <div className="braille-generator-container">
                 <form className="braille-generator">
-                    <label htmlFor="textInput">Punktskrift Generator</label>
-                    <input autoComplete="off" type="text" id="textInput" placeholder="skriv her..." />
-                    <div id="output"></div>
-                    <div>
+                    <label htmlFor="txtInput">Punktskrift Generator</label>
+                    <input autoComplete="off" type="text" id="txtInput" placeholder="skriv her..." />
+                    <textarea id="txtOutput"></textarea>
+                    <div className="btn-group">
                         <button>Kopier <i className="fas fa-copy"></i></button>
                         <button>Del <i className="fas fa-share"></i></button>
                     </div>

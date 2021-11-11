@@ -84,7 +84,7 @@ a:focus, a:active {
   align-content: flex-start;
   gap: 2vmax;
   margin: 3vmax;
-  height: 80vh;
+  height: 100%;
   box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.38);
 }
 .braille-generator label {
@@ -93,15 +93,48 @@ a:focus, a:active {
   width: 100%;
   background-color: #FFD500;
   text-align: center;
-  line-height: 3em;
-  font-size: 2em;
+  padding: 1em 0.75em;
+  margin: 0 0 1vmax 0;
+  font-size: clamp(1.5em, 4vw, 2.5rem);
   letter-spacing: 0.05em;
 }
 .braille-generator input {
   height: 2.5rem;
+  padding: 0 6px;
 }
 .braille-generator input, .braille-generator textarea, .braille-generator div {
   margin: 0 3vmax;
+}
+.braille-generator input:focus, .braille-generator textarea:focus, .braille-generator div:focus {
+  border: solid 2px #FFD500;
+  outline: none;
+}
+.braille-generator textarea {
+  min-height: 6vmax;
+}
+.braille-generator .btn-group {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-self: auto;
+  align-content: flex-start;
+  gap: 1vmin;
+  margin: 0 3vmax 4vmax 3vmax;
+}
+.braille-generator .btn-group button {
+  width: 100%;
+  border: none;
+  background-color: #FFD500;
+  border: solid 2px #FFD500;
+  padding: 0.8em 0;
+}
+.braille-generator .btn-group button:focus, .braille-generator .btn-group button:hover {
+  background-color: #ffee99;
 }
 
 /*# sourceMappingURL=styles.css.map */

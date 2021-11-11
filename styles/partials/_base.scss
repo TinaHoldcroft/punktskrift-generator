@@ -6,13 +6,10 @@
 html {
     overflow-y: auto;
     overflow-x: hidden;
-    //touch-action: pan-y;
-    //-ms-touch-action: pan-y;
 }
 html, body {
     scroll-behavior: smooth;
 }
 main {
     @include flex(column nowrap, flex-start, center, auto, flex-start, 0);
-    //margin: 3.5rem 0 0 0;
 }
