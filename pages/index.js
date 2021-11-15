@@ -48,17 +48,6 @@ export default function Home() {
             '#' : '&#10300;',
             "'" : '&#10256;',
             '&' : '&#10284;',
-
-            //'0' : '',
-            //'1' : '',
-            //'2' : '',
-            //'3' : '',
-            //'4' : '',
-            //'5' : '',
-            //'6' : '',
-            //'7' : '',
-            //'8' : '',
-            //'9' : '',
         }
 
         txtInput.onkeyup = function() {
@@ -72,13 +61,28 @@ export default function Home() {
                 }
             }
         }
-
     }
-      
+
+    const description = "beskrivelse av siden";
+    const image = "https://www.blindeforbundet.no/++theme++nbf.tema/logo_simple.svg";
+    const keywords = "Punktskrift Generator, Norges Blindeforbund";
+    const title = "⠝⠃⠋ | Punktskrift Generator";
+    const url ="https://punktskrift-generator.vercel.app/";
+
     return (
         <>
             <Head>
-                <title>⠝⠃⠋ | Punktskrift Generator</title>
+                <title>{title}</title>
+                <meta name="author" content="Norges Blindeforbund"/>
+		        <meta name="description" content={description}/>
+		        <meta name="keywords" content={keywords}/>
+                <meta property="og:image" content={image}/>
+                <meta property="og:title" content={title}/>
+                <meta property="og:description" content={description}/>
+                <meta property="og:url" content={url}/>
+                <meta property="og:type" content="website"/>
+
+                <meta name="theme-color" content="#FFD500"/>
             </Head>
 
             <div className="braille-generator-container">
@@ -91,6 +95,13 @@ export default function Home() {
                         <button>Del <i className="fas fa-share"></i></button>
                     </div>
                 </form>
+            </div>
+            <div
+                data-href="https://punktskrift-generator.vercel.app/" 
+                data-layout="button_count" data-size="small">
+                    <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpunktskrift-generator.vercel.app%2F&amp;src=sdkpreparse" 
+                     >Del på Facebook
+                    </a>
             </div>
         </>
     )
