@@ -68,6 +68,7 @@ export default function Home() {
     const keywords = "Punktskrift Generator, Norges Blindeforbund";
     const title = "⠝⠃⠋ | Punktskrift Generator";
     const url ="https://punktskrift-generator.vercel.app/";
+    const href = "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpunktskrift-generator.vercel.app%2F&amp;src=sdkpreparse"
 
     return (
         <>
@@ -91,17 +92,16 @@ export default function Home() {
                     <input autoComplete="off" type="text" id="txtInput" placeholder="skriv her..." />
                     <textarea id="txtOutput"></textarea>
                     <div className="btn-group">
-                        <button>Kopier <i className="fas fa-copy"></i></button>
-                        <button>Del <i className="fas fa-share"></i></button>
+                        <a className="btn">
+                            <i className="fab fa-twitter"></i> Del på Twitter
+                        </a>
+                        <div className="btn" data-href={url} data-layout="button_count" data-size="small">
+                            <a target="_blank" rel="noreferrer" href={href}>
+                                <i className="fab fa-facebook"></i> Del på Facebook
+                            </a>
+                        </div>
                     </div>
                 </form>
-            </div>
-            <div
-                data-href="https://punktskrift-generator.vercel.app/" 
-                data-layout="button_count" data-size="small">
-                    <a target="_blank"  rel="noreferrer" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpunktskrift-generator.vercel.app%2F&amp;src=sdkpreparse" 
-                     >Del på Facebook
-                    </a>
             </div>
         </>
     )

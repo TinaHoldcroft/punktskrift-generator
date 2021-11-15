@@ -15,12 +15,12 @@ class MyDocument extends Document {
                 <Head>
                     <meta charset="utf-8"/>
                     <script async src="https://kit.fontawesome.com/a83d77d417.js"/>
+                    <script async defer crossOrigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v12.0" nonce="lEqfJDDU"></script>
                     <link id="favicon" rel="icon" href="/favicon.svg"/>
                 </Head>
                 
                 <body>
-                    <div id="fb-root"></div>
-                    <script async defer crossOrigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v12.0" nonce="lEqfJDDU"></script>
+                    
                     <Main/>
                     <NextScript/>
                 </body>

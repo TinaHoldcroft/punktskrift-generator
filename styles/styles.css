@@ -44,7 +44,7 @@ a:focus, a:active {
   outline: none;
 }
 
-#output {
+#txtOutput {
   background-color: #FFFFFF;
   border: 1px solid #CCCCCC;
   font-size: 3em;
@@ -125,15 +125,16 @@ a:focus, a:active {
   align-content: flex-start;
   gap: 1vmin;
   margin: 0 3vmax 4vmax 3vmax;
+  width: 93.5%;
 }
-.braille-generator .btn-group button {
+.braille-generator .btn-group .btn {
   width: 100%;
   border: none;
   background-color: #FFD500;
   border: solid 2px #FFD500;
   padding: 0.8em 0;
 }
-.braille-generator .btn-group button:focus, .braille-generator .btn-group button:hover {
+.braille-generator .btn-group .btn:focus, .braille-generator .btn-group .btn:hover {
   background-color: #ffee99;
 }
 

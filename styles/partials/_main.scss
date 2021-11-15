@@ -1,10 +1,9 @@
-#output {
+#txtOutput {
     background-color: #FFFFFF;
     border: 1px solid #CCCCCC;
     font-size: 3em;
     font-weight: 900;
     letter-spacing: 0.1em;
-    //color : $yellow;
     text-shadow: 2px 2px $yellow;
     height: 10rem;
 }
@@ -47,7 +46,8 @@
     .btn-group {
         @include flex(row nowrap,flex-start, stretch, auto, flex-start, 1vmin);
         margin: 0 3vmax 4vmax 3vmax;
-        button {
+        width: 93.5%;
+        .btn {
             width: 100%;
             border: none;
             background-color: $yellow;
