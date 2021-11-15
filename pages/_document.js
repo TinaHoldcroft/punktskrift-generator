@@ -20,7 +20,7 @@ class MyDocument extends Document {
                 
                 <body>
                     <div id="fb-root"></div>
-                    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v12.0" nonce="lEqfJDDU"></script>
+                    <script async defer crossOrigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v12.0" nonce="lEqfJDDU"></script>
                     <Main/>
                     <NextScript/>
                 </body>

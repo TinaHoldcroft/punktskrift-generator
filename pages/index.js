@@ -99,7 +99,7 @@ export default function Home() {
             <div
                 data-href="https://punktskrift-generator.vercel.app/" 
                 data-layout="button_count" data-size="small">
-                    <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpunktskrift-generator.vercel.app%2F&amp;src=sdkpreparse" 
+                    <a target="_blank"  rel="noreferrer" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpunktskrift-generator.vercel.app%2F&amp;src=sdkpreparse" 
                      >Del på Facebook
                     </a>
             </div>
