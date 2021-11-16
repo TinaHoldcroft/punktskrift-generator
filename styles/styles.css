@@ -47,30 +47,13 @@ a:focus, a:active {
 #txtOutput {
   background-color: #FFFFFF;
   border: 1px solid #CCCCCC;
-  font-size: 3em;
   font-weight: 900;
   letter-spacing: 0.1em;
   text-shadow: 2px 2px #FFD500;
   height: 10rem;
-}
-
-.braille-generator-container {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: stretch;
-  align-self: auto;
-  align-content: flex-start;
-  gap: 0;
-  height: 100%;
-  max-width: 1000px;
-  width: 100vw;
-  box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.38);
-  margin: 5rem 0 0 0;
+  text-align: center;
+  width: 100%;
+  font-size: clamp(3em, 6vw, 6rem);
 }
 
 .braille-generator {
@@ -98,8 +81,19 @@ a:focus, a:active {
   letter-spacing: 0.05em;
 }
 .braille-generator input {
-  height: 2.5rem;
   padding: 0 6px;
+  color: black;
+  font-weight: 900;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 3px solid black;
+  font-size: clamp(1.5em, 4vw, 2.5rem);
+  line-height: 2em;
+}
+.braille-generator input::placeholder {
+  color: black;
+  opacity: 1;
 }
 .braille-generator input, .braille-generator textarea, .braille-generator div {
   margin: 0 3vmax;
@@ -109,23 +103,12 @@ a:focus, a:active {
   outline: none;
 }
 .braille-generator textarea {
-  min-height: 6vmax;
+  min-height: 3em;
+  border: none !important;
+  outline: none !important;
+  resize: none;
 }
 
-.btn-group {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
-  align-self: auto;
-  align-content: flex-start;
-  gap: 1vmin;
-  margin: 0 3vmax 4vmax 3vmax;
-}
 .btn-group .btn {
   width: 100%;
   border: none;
