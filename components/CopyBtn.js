@@ -1,5 +1,6 @@
 import React from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
+import Head from 'next/head';
 
 class Datepicker extends React.Component {
     constructor(props) {
@@ -75,23 +76,26 @@ class Datepicker extends React.Component {
     
         }
         return(
+            <>
+                <Head>
+		            <meta name="description" content={this.state.value}/>
+                    <meta property="og:description" content={this.state.value}/>
+                </Head>
             <div>
-                value: {this.state.value}
                 <br/>
                 <form className="braille-generator">
                 <label htmlFor="txtInput">Punktskrift Generator</label>
                 <input autoComplete="off" type="text" id="txtInput" placeholder="skriv her..." />
-                <textarea onMouseMove={this.handleChange.bind(this)} id="txtOutput">
-
-                    
-                </textarea>
+                <textarea onMouseOver={this.handleChange.bind(this)} onTouchMove={this.handleChange.bind(this)} id="txtOutput"></textarea>
             </form>
 
             <CopyToClipboard text={this.state.value}>
-            <button>Copy to clipboard</button>
+            
+            <button>{this.state.value}</button>
             </CopyToClipboard>
             
             </div>
+            </>
         )
     }
 }
