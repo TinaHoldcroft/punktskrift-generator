@@ -78,21 +78,22 @@ class Datepicker extends React.Component {
         return(
             <>
                 <Head>
-		            <meta name="description" content={this.state.value}/>
-                    <meta property="og:description" content={this.state.value}/>
+		            <meta name="description" content={'Mitt navn:' + this.state.value}/>
+                    <meta property="og:description" content={'Mitt navn:' + this.state.value}/>
                 </Head>
             <div>
-                <br/>
                 <form className="braille-generator">
                 <label htmlFor="txtInput">Punktskrift Generator</label>
                 <input autoComplete="off" type="text" id="txtInput" placeholder="skriv her..." />
                 <textarea onMouseOver={this.handleChange.bind(this)} onTouchMove={this.handleChange.bind(this)} id="txtOutput"></textarea>
+                <CopyToClipboard text={this.state.value}>
+            
+            <button>Copy: {this.state.value}</button>
+            </CopyToClipboard>
+            
             </form>
 
-            <CopyToClipboard text={this.state.value}>
-            
-            <button>{this.state.value}</button>
-            </CopyToClipboard>
+
             
             </div>
             </>
