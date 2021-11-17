@@ -33,29 +33,20 @@ body, button, a {
   font-weight: 400;
   font-size: 1em;
   font-style: normal;
-  color: #000;
+  color: #242424;
+  text-align: center;
 }
 
 a {
   text-decoration: none;
-  color: #000;
+  color: #242424;
 }
 
 a:focus, a:active {
   outline: none;
 }
 
-#txtOutput {
-  background-color: #FFFFFF;
-  font-weight: 900;
-  letter-spacing: 0.1em;
-  text-shadow: 2px 2px #FFD500;
-  text-align: center;
-  font-size: clamp(3em, 5vw, 5rem);
-}
-
 .generator-container {
-  width: 100vw;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -67,6 +58,7 @@ a:focus, a:active {
   align-self: auto;
   align-content: flex-start;
   gap: 0;
+  width: 100vw;
 }
 
 .braille-generator {
@@ -90,7 +82,6 @@ a:focus, a:active {
   font-weight: 900;
   width: 100%;
   background-color: #FFD500;
-  text-align: center;
   padding: 1em 0.75em;
   margin: 0 0 1vmax 0;
   font-size: clamp(1.5em, 4vw, 2.5rem);
@@ -98,33 +89,40 @@ a:focus, a:active {
 }
 .braille-generator input {
   padding: 0 6px;
-  color: black;
-  font-weight: 900;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: 3px solid black;
+  color: #242424;
+  border-top: solid 2px #ffffff;
+  border-left: solid 2px #ffffff;
+  border-right: solid 2px #ffffff;
+  border-bottom: 2px solid #242424;
   font-size: clamp(1.5em, 4vw, 2rem);
   line-height: 2em;
+  font-weight: 600;
   padding: 0 0.5em;
+  margin: 0 3vmax;
+  border-radius: none;
+  text-align: center;
 }
 .braille-generator input::placeholder {
-  color: black;
+  color: #242424;
   opacity: 1;
 }
-.braille-generator input, .braille-generator textarea {
-  margin: 0 3vmax;
-}
-.braille-generator input:focus, .braille-generator textarea:focus {
+.braille-generator input:focus {
   border: solid 2px #FFD500;
   outline: none;
 }
-.braille-generator textarea {
+
+#txtOutput {
+  background-color: #ffffff;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-shadow: 2px 2px #FFD500;
+  text-align: center;
+  font-size: clamp(3em, 5vw, 5rem);
   border: none;
   outline: none;
   resize: none;
 }
-.braille-generator textarea:focus {
+#txtOutput:focus {
   border: none;
   outline: none;
 }
@@ -150,11 +148,9 @@ a:focus, a:active {
 
 .btn {
   width: 100%;
-  border: none;
   background-color: #FFD500;
   border: solid 2px #FFD500;
   padding: 1em 2em;
-  text-align: center;
 }
 .btn:focus, .btn:hover {
   background-color: #ffee99;

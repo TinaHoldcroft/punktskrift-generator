@@ -1,18 +1,9 @@
-#txtOutput {
-    background-color: #FFFFFF;
-    font-weight: 900;
-    letter-spacing: 0.1em;
-    text-shadow: 2px 2px $yellow;
-    text-align: center;
-    font-size: clamp(3em, 5vw, 5rem);
-}
 .generator-container {
-    width: 100vw;
     @include flex(column nowrap, flex-start, center, auto, flex-start, 0);
+    width: 100vw;
 }
 .braille-generator {
     @include flex(column nowrap, flex-start, stretch, auto, flex-start, 2rem);
-    //background-color: blue;
     margin: 3rem 0;
     width: 90%;
     max-width: 1000px;
@@ -21,7 +12,6 @@
         font-weight: 900;
         width: 100%;
         background-color: $yellow;
-        text-align: center;
         padding: 1em 0.75em;
         margin: 0 0 1vmax 0;
         font-size: clamp(1.5em, 4vw, 2.5rem);
@@ -29,51 +19,51 @@
     }
     input {
         padding: 0 6px;
-        color: black;
-        font-weight: 900;
-        border-top: none;
-        border-left: none;
-        border-right: none;
-        border-bottom: 3px solid black;
+        color: $black;
+        border-top: solid 2px $white;
+        border-left: solid 2px $white;
+        border-right: solid 2px $white;
+        border-bottom: 2px solid $black;
         font-size: clamp(1.5em, 4vw, 2rem);
         line-height: 2em;
+        font-weight: 600;
         padding: 0 0.5em;
+        margin: 0 3vmax;
+        border-radius: none;
+        text-align: center;
         &::placeholder {
-            color: black;
+            color: $black;
             opacity: 1;
         }
-    }
-    input, textarea {
-        margin: 0 3vmax;
         &:focus {
             border: solid 2px $yellow;
             outline: none;
         }
     }
-    textarea {
+}
+#txtOutput {
+    background-color: $white;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-shadow: 2px 2px $yellow;
+    text-align: center;
+    font-size: clamp(3em, 5vw, 5rem);
+    border: none;
+    outline: none;
+    resize: none;
+    &:focus {
         border: none;
         outline: none;
-        resize: none;
-        &:focus {
-            border: none;
-            outline: none;
-        }
     }
 }
 .btn-group {
     @include flex(row nowrap,flex-start, stretch, auto, flex-start, 2vmax);
-    @media only screen and (max-width: 800px) { 
-        flex-flow: row wrap;
-    }
+    @media only screen and (max-width: 800px) { flex-flow: row wrap; }
 }
 .btn {
     width: 100%;
-    border: none;
     background-color: $yellow;
     border: solid 2px $yellow;
     padding: 1em 2em;
-    text-align: center;
-    &:focus, &:hover {
-        background-color: lighten($yellow, 30%);
-    }
+    &:focus, &:hover { background-color: lighten($yellow, 30%); }
 }
