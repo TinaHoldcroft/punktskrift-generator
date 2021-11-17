@@ -1,16 +1,21 @@
 #txtOutput {
     background-color: #FFFFFF;
-    border: 1px solid #CCCCCC;
     font-weight: 900;
     letter-spacing: 0.1em;
     text-shadow: 2px 2px $yellow;
-    height: 10rem;
     text-align: center;
-    width: 100%;
-    font-size: clamp(3em, 6vw, 6rem);
+    font-size: clamp(3em, 5vw, 5rem);
+}
+.generator-container {
+    width: 100vw;
+    @include flex(column nowrap, flex-start, center, auto, flex-start, 0);
 }
 .braille-generator {
-    @include flex(column nowrap,flex-start, stretch, auto, flex-start, 2vmax);
+    @include flex(column nowrap, flex-start, stretch, auto, flex-start, 2rem);
+    //background-color: blue;
+    margin: 3rem 0;
+    width: 90%;
+    max-width: 1000px;
     label {
         text-transform: uppercase;
         font-weight: 900;
@@ -30,14 +35,15 @@
         border-left: none;
         border-right: none;
         border-bottom: 3px solid black;
-        font-size: clamp(1.5em, 4vw, 2.5rem);
+        font-size: clamp(1.5em, 4vw, 2rem);
         line-height: 2em;
+        padding: 0 0.5em;
         &::placeholder {
             color: black;
             opacity: 1;
         }
     }
-    input, textarea, div {
+    input, textarea {
         margin: 0 3vmax;
         &:focus {
             border: solid 2px $yellow;
@@ -45,21 +51,29 @@
         }
     }
     textarea {
-        min-height: 3em;
-        border: none!important;
-        outline: none!important;
+        border: none;
+        outline: none;
         resize: none;
+        &:focus {
+            border: none;
+            outline: none;
+        }
     }
 }
 .btn-group {
-    .btn {
-        width: 100%;
-        border: none;
-        background-color: $yellow;
-        border: solid 2px $yellow;
-        padding: 0.8em 0;
-        &:focus, &:hover {
-            background-color: lighten($yellow, 30%);
-        }
+    @include flex(row nowrap,flex-start, stretch, auto, flex-start, 2vmax);
+    @media only screen and (max-width: 800px) { 
+        flex-flow: row wrap;
+    }
+}
+.btn {
+    width: 100%;
+    border: none;
+    background-color: $yellow;
+    border: solid 2px $yellow;
+    padding: 1em 2em;
+    text-align: center;
+    &:focus, &:hover {
+        background-color: lighten($yellow, 30%);
     }
 }

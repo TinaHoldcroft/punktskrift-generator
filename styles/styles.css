@@ -28,9 +28,10 @@ main {
   gap: 0;
 }
 
-body {
+body, button, a {
   font-family: open-sans, sans-serif;
   font-weight: 400;
+  font-size: 1em;
   font-style: normal;
   color: #000;
 }
@@ -46,14 +47,26 @@ a:focus, a:active {
 
 #txtOutput {
   background-color: #FFFFFF;
-  border: 1px solid #CCCCCC;
   font-weight: 900;
   letter-spacing: 0.1em;
   text-shadow: 2px 2px #FFD500;
-  height: 10rem;
   text-align: center;
-  width: 100%;
-  font-size: clamp(3em, 6vw, 6rem);
+  font-size: clamp(3em, 5vw, 5rem);
+}
+
+.generator-container {
+  width: 100vw;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-self: auto;
+  align-content: flex-start;
+  gap: 0;
 }
 
 .braille-generator {
@@ -67,7 +80,10 @@ a:focus, a:active {
   align-items: stretch;
   align-self: auto;
   align-content: flex-start;
-  gap: 2vmax;
+  gap: 2rem;
+  margin: 3rem 0;
+  width: 90%;
+  max-width: 1000px;
 }
 .braille-generator label {
   text-transform: uppercase;
@@ -88,35 +104,59 @@ a:focus, a:active {
   border-left: none;
   border-right: none;
   border-bottom: 3px solid black;
-  font-size: clamp(1.5em, 4vw, 2.5rem);
+  font-size: clamp(1.5em, 4vw, 2rem);
   line-height: 2em;
+  padding: 0 0.5em;
 }
 .braille-generator input::placeholder {
   color: black;
   opacity: 1;
 }
-.braille-generator input, .braille-generator textarea, .braille-generator div {
+.braille-generator input, .braille-generator textarea {
   margin: 0 3vmax;
 }
-.braille-generator input:focus, .braille-generator textarea:focus, .braille-generator div:focus {
+.braille-generator input:focus, .braille-generator textarea:focus {
   border: solid 2px #FFD500;
   outline: none;
 }
 .braille-generator textarea {
-  min-height: 3em;
-  border: none !important;
-  outline: none !important;
+  border: none;
+  outline: none;
   resize: none;
 }
+.braille-generator textarea:focus {
+  border: none;
+  outline: none;
+}
 
-.btn-group .btn {
+.btn-group {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-self: auto;
+  align-content: flex-start;
+  gap: 2vmax;
+}
+@media only screen and (max-width: 800px) {
+  .btn-group {
+    flex-flow: row wrap;
+  }
+}
+
+.btn {
   width: 100%;
   border: none;
   background-color: #FFD500;
   border: solid 2px #FFD500;
-  padding: 0.8em 0;
+  padding: 1em 2em;
+  text-align: center;
 }
-.btn-group .btn:focus, .btn-group .btn:hover {
+.btn:focus, .btn:hover {
   background-color: #ffee99;
 }
 
