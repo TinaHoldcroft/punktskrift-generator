@@ -7,9 +7,7 @@ html {
     overflow-y: auto;
     overflow-x: hidden;
 }
-html, body {
-    scroll-behavior: smooth;
-}
+html, body { scroll-behavior: smooth; }
 main {
     @include flex(column nowrap, flex-start, center, auto, flex-start, 0);
 }
