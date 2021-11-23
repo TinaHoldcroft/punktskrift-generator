@@ -79,14 +79,14 @@ class Generator extends React.Component {
         return(
             <>
                 <form id="brailleGenerator" className="braille-generator">
-                    <label htmlFor="txtInput">Punktskrift Generator</label>
+                    <label htmlFor="txtInput">Punktskriftgenerator – se hvordan navnet ditt blir i punkt</label>
                     <input autoComplete="off" type="text" id="txtInput" placeholder="Skriv navnet ditt her..." />
                     <textarea onMouseOver={this.handleChange.bind(this)} onTouchMove={this.handleChange.bind(this)} id="txtOutput"></textarea>
 
                     <div className="btn-group">
                         <CopyToClipboard text={this.state.value}>
                             <button form="brailleGenerator" title="kopier" className="btn" type="button" name="kopier" value="Kopier">
-                                <i className="fas fa-copy"></i> Kopier
+                                <i className="fas fa-copy"></i> Kopierer punktskrift din
                             </button>
                         </CopyToClipboard>
                         <ShareBtn

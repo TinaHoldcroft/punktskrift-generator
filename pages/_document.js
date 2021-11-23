@@ -9,7 +9,7 @@ class MyDocument extends Document {
 
     render() {
         const lang = "no";
-        const description = "Punktskrift generator fra Norges Blindeforbund";
+        const description = "Punktskriftgenerator – se hvordan navnet ditt blir i punkt";
         const image = "https://www.blindeforbundet.no/++theme++nbf.tema/logo_simple.svg";
         const keywords = "Punktskrift Generator, Norges Blindeforbund";
         const url ="https://punktskrift-generator.vercel.app/";
