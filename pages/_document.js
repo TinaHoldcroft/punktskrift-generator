@@ -9,17 +9,17 @@ class MyDocument extends Document {
 
     render() {
         const lang = "no";
-        const description = "Punktskriftgenerator – se hvordan navnet ditt blir i punkt";
+        const description = "Punktskriftgenerator | se hvordan navnet ditt blir i punkt";
         const image = "https://www.blindeforbundet.no/++theme++nbf.tema/logo_simple.svg";
         const keywords = "Punktskrift Generator, Norges Blindeforbund";
-        const url ="https://punktskrift-generator.vercel.app/";
+        const url ="https://www.blindeforbundet.no/static/punktskriftgenerator/";
 
         return (
             <Html lang={lang}>
                 <Head>
                     <meta charset="utf-8"/>
                     <script async src="https://kit.fontawesome.com/a83d77d417.js"/>
-                    <script async defer crossOrigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v12.0" nonce="lEqfJDDU"></script>
+                    <script async defer crossOrigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v12.0" nonce="uO2QhHG3"></script>
                     <link id="favicon" rel="icon" href="/favicon.svg"/>
                     <meta name="author" content="Norges Blindeforbund"/>
 		            <meta name="keywords" content={keywords}/>
